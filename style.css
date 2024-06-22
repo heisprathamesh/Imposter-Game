@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Atomic+Age&family=Bokor&family=Bonheur+Royale&family=Bungee&family=Calligraffitti&family=Chakra+Petch:wght@700&family=Condiment&family=Creepster&family=Jolly+Lodger&family=Megrim&family=Montserrat&family=New+Rocker&family=Nosifer&family=Pirata+One&family=Poppins&family=Potta+One&family=Racing+Sans+One&family=Reggae+One&family=Rubik+Glitch&family=Rubik+Mono+One&family=Rubik+Wet+Paint&family=Russo+One&family=Trade+Winds&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: #090c1a;
+
+    
+}
+/*navigator*/
+.nav{
+    
+    background-color: #8400ff;
+    padding: 0px 12px;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.logo{
+    color: aliceblue;
+   
+    font-family: 'UnifrakturCook', cursive;
+
+
+}
+.samer{
+   
+    margin-right: 10px;
+    margin-top: 20px;
+
+}
+.sam1, .sam2{
+    width: 27px;
+    height: 3px;
+    background: linear-gradient(to right , #acacacde , #eeeeeed3);
+    margin-bottom: 4px;
+    border-radius: 500px 20px 500px 20px;
+}
+.sam2{
+    width: 19px;
+}
+.sam1:hover, .sam2:hover{
+    margin-bottom:8px;
+}
+
+.hidnav{
+    z-index: 3000;
+    justify-content: center;
+    position: fixed;
+    background-color:#121220c9;
+    height:100vh;
+    width: 100%;
+    animation: entrys 0.3s linear  1 alternate;
+    user-select: none;
+}
+.hidnav h3{
+    color: #c2c2c2d5;
+    text-align: center;
+    font-family: 'Trade Winds', cursive;
+    margin: 40px auto;
+    
+  
+    
+}
+
+/*maining*/
+.formal{
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+.formal h1{
+    color: #e9e4e4a9;
+    font-size:23px;
+    pointer-events: none;
+    text-align: justify;
+    font-family: 'New Rocker', cursive;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    
+}
+.start{
+    background-color: #c0bebe;
+    background: url("bghhh.avif");
+    background-size: cover;
+    border-radius: 100px 0px 100px 0px;
+
+    font-family: 'New Rocker', cursive;
+    font-size: 24px;
+    width: 360px;
+    height: 150px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    margin: 20px auto;
+    position: relative;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+            
+}
+.start::after , .start::before{
+content: "";
+width: calc(100% + 4px);
+height: calc(100% + 4px);
+background: linear-gradient(45deg, #fb0094, #0000f1,#00ff00, #7b32ce, #ff0000, #fb0094, #7305ce,#00ff00, #e23f70, #ff0000 );
+background-size: 400%;
+border-radius: 100px 0px 100px 00px;
+position: absolute;
+top: -2px;
+left: -2px;
+z-index: -3;
+animation: anim 10s linear infinite alternate;
+transition: all 0.3s;
+}
+.start::after{
+filter: blur(30px);
+}
+.start h1{
+background: linear-gradient(to right, #81000b, #a70008,#c7000a, #ff000d);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+@keyframes anim{
+0%{
+    background-position: 0 0;
+}
+50%{
+    background-position: 100% 0;
+}
+100%{
+    background-position: 0 0;
+}
+}
+
+.start h1{
+user-select: none;
+}
+
+.start:hover{
+transform:skew(8deg, 5deg)rotateX(48deg);
+
+
+
+
+
+}
+
+
+/*playsection*/
+.playsec{
+    background-image: url("https://i.pinimg.com/originals/e0/bb/ae/e0bbae55203f566fef5ac9f325ff9573.jpg");
+    background-size: cover;
+
+display: none;
+margin: 10px;
+border: #7c7c7c88 dashed 1px;
+
+padding:10px;
+}
+.player_seter{
+display: flex;
+gap: 20px;
+justify-content: center;
+place-items: center;
+}
+
+.players{
+display: none;
+width: auto;
+height: auto;
+margin: 20px;
+animation: entry1 0.7s linear  1 alternate;
+position: relative;
+z-index: 3;
+transition-duration: 0.3s;
+transition-timing-function: linear;
+
+
+}
+.players:hover::after{
+content: "";
+width: calc(100% + 4px);
+height: calc(100% + 4px);
+background: linear-gradient(45deg, #ff0000, #a200ff,#ff0241, #7701ff, #ff0000, #c000fb, #ff0000,#8400ff, #ff024e, #c300ff );
+background-size: 400%;
+position: absolute;
+top: -2px;
+left: -2px;
+z-index: -3;
+animation: anim 10s linear infinite alternate;
+}
+.players:hover::after{
+filter: blur(30px);
+}
+
+
+.playerimg{
+/*red one is red charecter*/
+width: 90px;
+}
+#yellowone{
+width:90px;
+animation: entry2 0.7s linear  1 alternate;
+}
+#redone{
+    width: 100px;
+animation: entry3 0.7s linear  1 alternate;
+}
+#blackone{
+animation: entry4 0.7s linear  1 alternate;
+}
+#purpleone{
+animation: entry5 0.7s linear  1 alternate;
+}
+#greenone{
+animation: entry3 0.7s linear  1 alternate;
+
+}
+
+.playsec h3{
+text-align: center;
+font-family: 'New Rocker', cursive;
+color: #fd0000;
+text-shadow: 3px 3px 4px black;
+margin: 12px auto;
+font-size: 27px;
+
+}
+.result{
+background-color: #1b1b1bcb;
+color: #ffffffc0;
+padding: 20px 10px;
+animation: none 0.3s ease-in-out 1 alternate;
+}
+.result h1{
+margin: 0 auto;
+width: fit-content;
+height: fit-content;
+text-align: center;
+font-family: 'Creepster', cursive;
+letter-spacing: 2px;
+font-size: 30px;
+background: linear-gradient(-300deg, rgb(175, 0, 0), rgb(207, 0, 0), #ff0000), rgb(248, 30, 30);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.afterson{
+padding: 20px;
+color: #9b9a9abb; 
+font-family: 'Trade Winds', cursive;
+}
+.afterson ul{
+margin:10px;
+}
+
+.foot{
+height: 250px;
+padding: 10px 20px;
+border-top: groove 1px #646464c4;
+background-color: rgba(23, 28, 41, 0.781);
+background-size: cover;
+color: #ddddddce;
+font-family: 'Metal Mania', cursive;
+/*https://cutewallpaper.org/28/desktop-wallpaper-city-streets/550615731.jpg*/
+
+}
+.nav_for{
+display: flex;
+gap: 40px;
+margin-bottom: 20px;
+}
+.linkimg{
+width: 30px;
+transition-duration: 0.3s;
+}
+.linkimg:hover{
+transform: scale(1.5);
+}
+
+
+/*dedicated for keyframes only*/
+
+@keyframes entry1{
+    0%{
+        transform: scale(0)skew(25deg ,45deg);
+    }
+    100%{
+        transform:scale(1)skew(0,0);
+    }
+}
+@keyframes entry2{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes entry3{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform:  rotate(0deg);
+    }
+}
+
+@keyframes entry4{
+    0%{
+        transform:rotateX(-360deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+@keyframes entry5{
+    0%{
+        transform:rotateY(360deg);
+    }
+    100%{
+        transform:  rotateY(0deg);
+    }
+}
+@keyframes frex{
+    0%{
+       opacity: 0;
+       transform: translateX(10px) translateY(10px);
+    }
+    20%{
+      opacity: 1;
+      transform: translateX(-10px) translateY(-10px);
+    }
+    50%{
+       opacity: 0;
+       transform:translateX(10px)translateY(10px) ;
+    }
+    75%{
+      opacity: 1;
+      transform: translateX(-10px) translateY(-10px);
+    }
+    100%{
+       opacity: 0;
+       transform: translateX(10px) translateY(10px);
+    }
+}
+@keyframes entrys{
+    from{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+.logo_img{
+     width: 100px;
+}
+#wed{
+     height: 160px;
+     z-index:2;
+     margin: 0 0;
+     transition-duration: 0.3s;
+     transition-timing-function: linear;
+     
+}
+#wed:hover{
+    transform: rotateX(180deg) skew(10deg,4deg);
+}
+.nitro{
+    display: flex;
+    justify-content:center;
+    place-items: center;
+    position: relative;
+    width: 100%;
+    height: 130px;
+    
+}
+.h1_nitro{
+    font-size:30px;
+    font-family: 'New Rocker', cursive;
+    font-weight:bolder;
+    width: fit-content;
+    height: fit-content;
+    background: linear-gradient(90deg, rgb(145, 0, 0), rgb(245, 0, 0), rgb(156, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.colg{
+    display: flex;
+    flex-direction: column;
+    gap:0;
+}
+
+.aside_nitro{
+    padding: 0 20%;
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&family=Alkatra&family=Bebas+Neue&family=Creepster&display=swap');
+
+
+
+
+/*fresj*/
+
+.dials{
+    width:400px;
+    height: 300px;
+    color: white;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px black;
+    border-radius: 2px;
+    z-index:1001;
+    position: fixed;
+    top: 25%;
+    left: 35%;
+    padding-top: 40px;
+    text-transform: capitalize;
+    
+}
+#dial1{
+    background-image: url('deff.gif');
+    background-size: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#dial1 p{
+    color: #d10000;
+    text-shadow: 4px 4px 4px black;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'rubik wet paint';
+
+}
+.dials p{
+    color: #0055d4;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'poppins';
+
+}
+.okay{
+    width: 40%;
+    height: 60px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    font-size: 20px;
+    color: #fa0000;
+    font-weight: 700;
+    background-color: #03111b;
+    transition: all 0.3s;
+}
+.okay:hover{
+    background-color: #000205;
+    box-shadow: 2px 2px 2px black;
+    color: #fa0000;
+
+}
+
+#sent2{
+    color: #0059ff;
+    text-shadow: 4px 4px 4px black;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'rubik wet paint';
+
+}
+#dial2{
+    background-image: url('vic.gif');
+    background-size: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width:767px) {
+
+    .dials{
+        width:320px;
+        top: 25%;
+        left: 6%;
+        
+    }
+    .foot{
+        height: 300px;
+    }
+
+    .start{
+
+        width: 300px;
+        height: 150px;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        margin: 20px auto;
+        position: relative;
+                
+    }
+    .playsec{
+        margin: 0 0;
+        border: 1px solid black;
+    }
+
+    .start:hover{
+        transform:skew(2deg, 3deg)rotateX(48deg);
+    
+        
+        }
+}
